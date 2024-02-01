@@ -1,14 +1,29 @@
 package VectoresAvanzados1;
 
+import java.util.Arrays;
+
 public class Alumnos {
 
+	private Asignaturas[] asignaturas;
+	private int cuantasAsignaturas;
 	private String nombre;
 	private String apellidos;
 	private int telefono;
 	private float calificacion;
 	
 	
-	
+public void add(Asignaturas asignatura) {
+		
+		if(cuantasAsignaturas<asignaturas.length) {
+			asignaturas[cuantasAsignaturas] = asignatura;
+			cuantasAsignaturas++;
+		}
+   }
+	@Override
+public String toString() {
+	return "Alumnos [asignaturas=" + Arrays.toString(asignaturas) + ", nombre=" + nombre + ", apellidos=" + apellidos
+			+ ", telefono=" + telefono + ", calificacion=" + calificacion + "]";
+}
 	public String getNombre() {
 		return nombre;
 	}

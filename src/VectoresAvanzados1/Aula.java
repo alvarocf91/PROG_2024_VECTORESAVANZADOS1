@@ -22,4 +22,8 @@ public void add(Alumnos alumno) {
 		}
 	
 }
+@Override
+public String toString() {
+	return "Aula [alumnos=" + Arrays.toString(alumnos) + ", cuantos=" + cuantos + "]";
+}
 }
